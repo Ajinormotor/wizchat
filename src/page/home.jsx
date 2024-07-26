@@ -88,7 +88,7 @@ const Home = () => {
  }   = useHook();
 
   return (
-    <section className="flex  justify-center w-[100%] h-[100vh] overflow-x-hidden  border-[1px] border-violet-500  lg:mb-[2rem]  relative rounded-[10px] p-2  overflow-hidden">
+    <section className="flex  justify-center w-[100%] h-[100vh] overflow-x-hidden   lg:mb-[2rem]  relative rounded-[10px]   overflow-hidden">
       <Helmet>
         <title className="gap-[5px]">WizChat | Home</title>
         <meta name="description" content="Helmet application" />
@@ -144,11 +144,11 @@ const Home = () => {
       </div>
 
       {/* chatbox */}
-      <div className="flex flex-col border-[1px] border-violet-500 md:ml-[19rem] w-[100%] md:w-[80%] lg:w-[50%] xl:ml-[22rem]">
+      <div className="flex flex-col border-[1px] border-violet-500 md:ml-[22rem] w-[100%] md:w-[80%] lg:w-[50%] xl:ml-[22rem]">
         {currentChat ? (
           <>
             {/* heading in chatbox */}
-            <div className="flex items-center justify-between  gap-[10px] p-[1rem] bg-violet-500 rounded-[5px]">
+            <div className="flex items-center justify-between  gap-[10px] p-[1rem] bg-violet-500 rounded-[5px] rounded-tl-none  rounded-tr-none">
               <div
                 key={currentChat.id}
                 className="flex items-center border-b-gray-500 border-b-[1px] p-1 gap-[10px] py-[0rem]"
