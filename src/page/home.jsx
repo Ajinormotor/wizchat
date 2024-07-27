@@ -97,7 +97,7 @@ const Home = () => {
       {/* chatMenu with conversation */}
       <div
       
-      className={`flex-col h-[100vh] lg:w-[28%] md:px-[1rem] pt-[1rem]  md:flex w-[60%]   rounded-[5px] border-r-[1px] border-white md:border-transparent ${
+      className={`flex-col h-[100vh] lg:w-[28%] md:px-[1rem] md:pt-[1rem] gap-[20px] flex   md:flex w-[60%]   rounded-[5px] border-r-[1px] border-white md:border-transparent ${
         hideConversation
           ? "hidden"
           : "block z-10 bg-violet-500 left-0 md:bg-transparent  md:w-[40%]  w-[100%] absolute "
@@ -109,7 +109,7 @@ const Home = () => {
         <h1 className="lg:text-[40px] font-[600] md:text-[#f9f9f9]">WizChat</h1>
         </div>
 
-        <div className="pt-[1rem] cursor-pointer">
+        <div className="pt-[1rem] cursor-pointer flex flex-col gap-[20px]">
 
 
           <h1 className="text-[30px] font-[400]">Friends</h1>
@@ -148,7 +148,7 @@ const Home = () => {
         {currentChat ? (
           <>
             {/* heading in chatbox */}
-            <div className="flex items-center justify-between h-[8vh]  md:h-[12vh]  gap-[10px] p-[1rem] bg-violet-500 rounded-[5px] rounded-tl-none  rounded-tr-none">
+            <div className="flex items-center justify-between h-[10vh]  md:h-[12vh]  gap-[10px] p-[1rem] bg-violet-500 rounded-[5px] rounded-tl-none  rounded-tr-none">
               <div
                 key={currentChat.id}
                 className="flex items-center border-b-gray-500 border-b-[1px] p-1 gap-[10px] py-[0rem]"
@@ -174,7 +174,7 @@ const Home = () => {
 
 
 {/* where the message is been displayed */}
-            <div className="overflow-y-auto  gap-[10px] flex flex-col">
+            <div className="overflow-y-scroll lg:h-[72vh] md:h-[79vh] h-[78vh] gap-[10px] flex flex-col">
               {messages.map((item) => {
                 const sender = chatdata[0].chat.participants.find(
                   (p) => p.id === item.senderId
@@ -204,12 +204,12 @@ const Home = () => {
         )}
 
         {/* chat bottom */}
-        <div className="w-[100%]  flex items-center justify-between p-[10px] mb-[1rem]">
+        <div className="flex items-center justify-between p-[10px] w-[100%] md:w-[55%] lg:w-[50%] fixed bottom-0 bg-[#f9f9f9]">
 
 
 
-          <div className="flex  p-[10px]  mx-1 w-[100%] rounded-[8px] justify-between border-[1px]
-           border-violet-500 overflow-y-hidden">
+          <div className="flex  p-[10px] w-[100%]  mx-1 rounded-[8px] justify-between border-[1px]
+           border-violet-500 ">
             <input
               type="text"
               placeholder="Send your message..."
@@ -226,7 +226,7 @@ const Home = () => {
                               {/* emoji and so on */}
                               <div className="flex flex-col  border-1 border-red-400  "  >
 <i className="ri-emoji-sticker-line cursor-pointer lg:text-[30px]" onClick={()=> setOpenEmoji((prev) =>!prev)}></i>
-{openEmoji && <div className="w-[100px] h-[20px] absolute bottom-[510px] md:right-[280px] lg:right-[550px] right-[245px]">
+{openEmoji && <div className="w-[100px] h-[20px] absolute bottom-[510px] md:right-[250px] lg:right-[270px] right-[255px]">
   
 <EmojiPicker className="w-[100px] h-[100px]"  onEmojiClick={handleEmoji}/>
   
