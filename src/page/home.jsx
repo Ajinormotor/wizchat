@@ -215,7 +215,7 @@ const Home = () => {
               placeholder="Send your message..."
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
-              className=" p-[10px] border-none outline-none"
+              className=" p-[10px] border-none outline-none w-[100%] bg-transparent overflow-y-auto"
             />
             <button value="Submit" onClick={handleSendMessage}>
               <i className="ri-send-plane-fill"></i>
