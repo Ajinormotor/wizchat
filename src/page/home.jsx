@@ -174,7 +174,7 @@ const Home = () => {
 
 
 {/* where the message is been displayed */}
-            <div className="overflow-y-scroll lg:h-[72vh] md:h-[79vh] h-[78vh] gap-[10px] flex flex-col mt-[6rem] md:mt-[8.5rem] lg:mt-[4.5rem] ">
+            <div className="overflow-y-scroll lg:h-[72vh] md:h-[79vh] h-[78vh] gap-[10px] flex flex-col mt-[5.0rem] md:mt-[8.5rem] lg:mt-[4.5rem] ">
               {messages.map((item) => {
                 const sender = chatdata[0].chat.participants.find(
                   (p) => p.id === item.senderId
