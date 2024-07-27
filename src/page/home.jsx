@@ -148,7 +148,7 @@ const Home = () => {
         {currentChat ? (
           <>
             {/* heading in chatbox */}
-            <div className="flex items-center justify-between h-[10vh]  md:h-[12vh]  gap-[10px] p-[1rem] bg-violet-500 rounded-[5px] rounded-tl-none  rounded-tr-none">
+            <div className="flex items-center justify-between h-[10vh] fixed  md:h-[11vh]  gap-[10px] p-[1rem] bg-violet-500 rounded-[5px] rounded-tl-none w-[100%] md:w-[55%] lg:w-[50%]  rounded-tr-none">
               <div
                 key={currentChat.id}
                 className="flex items-center border-b-gray-500 border-b-[1px] p-1 gap-[10px] py-[0rem]"
@@ -174,7 +174,7 @@ const Home = () => {
 
 
 {/* where the message is been displayed */}
-            <div className="overflow-y-scroll lg:h-[72vh] md:h-[79vh] h-[78vh] gap-[10px] flex flex-col">
+            <div className="overflow-y-scroll lg:h-[72vh] md:h-[79vh] h-[78vh] gap-[10px] flex flex-col mt-[6rem] md:mt-[8.5rem] lg:mt-[4.5rem] ">
               {messages.map((item) => {
                 const sender = chatdata[0].chat.participants.find(
                   (p) => p.id === item.senderId
