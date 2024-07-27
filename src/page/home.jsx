@@ -97,7 +97,7 @@ const Home = () => {
       {/* chatMenu with conversation */}
       <div
       
-      className={`flex-col h-[100vh] lg:w-[28%] px-[1rem]  md:flex w-[60%]   ${
+      className={`flex-col h-[100vh] lg:w-[28%] md:px-[1rem] pt-[1rem]  md:flex w-[60%]   rounded-[5px] border-r-[1px] border-white md:border-transparent ${
         hideConversation
           ? "hidden"
           : "block z-10 bg-violet-500 left-0 md:bg-transparent  md:w-[40%]  w-[100%] absolute "
@@ -148,7 +148,7 @@ const Home = () => {
         {currentChat ? (
           <>
             {/* heading in chatbox */}
-            <div className="flex items-center justify-between  gap-[10px] p-[1rem] bg-violet-500 rounded-[5px] rounded-tl-none  rounded-tr-none">
+            <div className="flex items-center justify-between h-[8vh]  md:h-[12vh]  gap-[10px] p-[1rem] bg-violet-500 rounded-[5px] rounded-tl-none  rounded-tr-none">
               <div
                 key={currentChat.id}
                 className="flex items-center border-b-gray-500 border-b-[1px] p-1 gap-[10px] py-[0rem]"
@@ -174,7 +174,7 @@ const Home = () => {
 
 
 {/* where the message is been displayed */}
-            <div className="overflow-y-scroll h-[100%] gap-[10px] flex flex-col">
+            <div className="overflow-y-scroll  gap-[10px] flex flex-col">
               {messages.map((item) => {
                 const sender = chatdata[0].chat.participants.find(
                   (p) => p.id === item.senderId
@@ -204,7 +204,7 @@ const Home = () => {
         )}
 
         {/* chat bottom */}
-        <div className="w-[100%]  flex items-center justify-between p-[10px]">
+        <div className="w-[100%]  flex items-center justify-between p-[10px] mb-[1rem]">
 
 
 
