@@ -88,7 +88,7 @@ const Home = () => {
  }   = useHook();
 
   return (
-    <section className="flex  justify-center w-[100%] h-[100vh] overflow-x-hidden   lg:mb-[2rem]  relative rounded-[10px]   overflow-hidden">
+    <section className="flex  justify-center w-[100%] h-[100vh] overflow-x-hidden   lg:mb-[2rem]  relative rounded-[10px]   overflow-y-hidden">
       <Helmet>
         <title className="gap-[5px]">WizChat | Home</title>
         <meta name="description" content="Helmet application" />
@@ -97,7 +97,7 @@ const Home = () => {
       {/* chatMenu with conversation */}
       <div
       
-      className={`flex-col h-[100vh] lg:w-[28%] p-[1rem] md:flex w-[60%]   ${
+      className={`flex-col h-[100vh] lg:w-[28%] px-[1rem]  md:flex w-[60%]   ${
         hideConversation
           ? "hidden"
           : "block z-10 bg-violet-500 left-0 md:bg-transparent  md:w-[40%]  w-[100%] absolute "
@@ -127,7 +127,7 @@ const Home = () => {
                   onClick={() => handlePresence(item.id)}
                 />
                 <span
-                  className={`w-[7px] h-[7px] rounded-[50%] absolute md:left-[22.5%] lg:left-[20.5%] left-[36%] mt-[2rem] ${
+                  className={`w-[7px] h-[7px] rounded-[50%] absolute md:left-[22.5%] lg:left-[20.5%] left-[28%] mt-[2rem] ${
                     presence[item.id] ? 'bg-green-500' : 'bg-gray-500'
                   }`}
                 ></span>
@@ -144,7 +144,7 @@ const Home = () => {
       </div>
 
       {/* chatbox */}
-      <div className="flex flex-col border-[1px] border-violet-500 md:ml-[22rem] w-[100%] md:w-[80%] lg:w-[50%] xl:ml-[22rem]">
+      <div className="flex flex-col border-[1px] border-violet-500 md:ml-[22rem] w-[100%] md:w-[80%] h-[100vh]  lg:w-[50%] xl:ml-[22rem] overflow-y-hidden ">
         {currentChat ? (
           <>
             {/* heading in chatbox */}
@@ -240,7 +240,7 @@ const Home = () => {
       </div>
 
       {/* chat Online */}
-      <div className="hidden lg:flex flex-col items-center h-[90vh] w-[23%]">
+      <div className="hidden lg:flex flex-col items-center  w-[23%]">
         {currentChat ? (
           <div
             key={currentChat.id}

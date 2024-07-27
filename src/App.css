@@ -3,3 +3,6 @@
   margin: 0px;
   font-family: 'Times New Roman', Times, serif;
 }
+body{
+  height: 100vh;
+}
